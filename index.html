@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>StudyFlow</h1>
+    <button id="themeBtn">🌙 Dark Mode</button>
+</header>
+
+<main>
+    <section class="welcome">
+        <h2>Welcome to StudyFlow 👋</h2>
+        <p>Organize your tasks and achieve your goals.</p>
+        <p id="clock"></p>
+    </section>
+
+    <section class="stats">
+        <div class="card">
+            <h3>Total Tasks</h3>
+            <p id="total">0</p>
+        </div>
+        <div class="card">
+            <h3>Completed</h3>
+            <p id="completed">0</p>
+        </div>
+        <div class="card">
+            <h3>Remaining</h3>
+            <p id="remaining">0</p>
+        </div>
+    </section>
+
+    <section class="task-section">
+        <h2>My Tasks</h2>
+
+        <div class="controls">
+            <input type="text" id="taskInput"
+                placeholder="Enter a new task...">
+            <button id="addBtn">Add Task +</button>
+        </div>
+
+        <input type="text" id="searchInput"
+            placeholder="Search your tasks...">
+
+        <ul id="taskList"></ul>
+
+        <h3>Progress</h3>
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+        <p id="progressText">0% completed</p>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 StudyFlow | Built by Melissa</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
