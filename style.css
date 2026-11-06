@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172554;
+    transition: 0.3s;
+}
+
+header {
+    background: #172554;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.welcome {
+    background: linear-gradient(120deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 35px;
+    border-radius: 15px;
+    line-height: 2;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.card, .task-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000010;
+}
+
+.card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 12px;
+    color: #2563eb;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+#taskList {
+    list-style: none;
+    margin: 15px 0;
+}
+
+#taskList li {
+    background: #f1f5f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.delete {
+    background: #dc2626;
+}
+
+.progress {
+    height: 14px;
+    background: #dbeafe;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+}
+
+.dark {
+    background: #0f172a;
+    color: white;
+}
+
+.dark .card,
+.dark .task-section {
+    background: #1e293b;
+    color: white;
+}
+
+.dark #taskList li {
+    background: #334155;
+    color: white;
+}
+
+@media (max-width: 650px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    main {
+        width: 92%;
+    }
+}
